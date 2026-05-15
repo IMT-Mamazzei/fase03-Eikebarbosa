@@ -7,7 +7,7 @@ Além disso, como o computador sabe que na expressão `2 + 3 * 4`, a multiplica�
 Bem-vindo à **Análise Sintática**! Nosso objetivo agora é validar a estrutura gramatical do código usando o gerador de parsers **CUP** (baseado em algoritmos ascendentes LALR).
 
 ## 🎯 O Desafio
-Você deve converter a gramática da linguagem **JACA** para o formato do CUP no arquivo `src/main/cup/Parser.cup`.
+Você deve converter a gramática da linguagem **JACA** para o formato do CUP no arquivo `src/main/cup/parser.cup`.
 
 **As Regras da JACA:**
 1. Um programa é uma lista de comandos.
@@ -23,8 +23,8 @@ A especificação acima permite repetições e itens opcionais (EBNF). O CUP ace
 Você não pode usar `[ ]` ou `{ }` no CUP. Você terá que pesquisar como transformar listas usando **recursão à esquerda** (ex: `lista ::= lista item | item`).
 
 ## 🛠️ Como fazer?
-1. Copie o seu arquivo `Lexer.lex` (que passou nos testes da Fase 2) para a pasta `src/main/jflex/`.
-2. Abra o arquivo `Parser.cup` e implemente as regras gramaticais nos espaços marcados com `/* TODO */`.
+1. Complete o arquivo `Lexer.lex` fornecido e complete as etapas indicadas com `/* TODO */`.
+2. Abra o arquivo `parser.cup` e implemente as regras gramaticais nos espaços marcados com `/* TODO */`.
 3. Resolva as precedências matemáticas (`*` é resolvido antes de `+`) declarando as diretivas `%left` e `%right` no topo do arquivo.
 
 ## Como ficará a estrutura ##
@@ -38,10 +38,7 @@ Você não pode usar `[ ]` ou `{ }` no CUP. Você terá que pesquisar como trans
       │    ├── /jflex
       │    │    └── Lexer.lex                   <-- (Você deve copiar da Fase 2)
       │    ├── /cup
-      │    │    └── Parser.cup                  <-- Esqueleto fornecido para você utilizar
-      │    └── /java
-      │         └── /br/maua/cic303
-      │              └── CompilerException.java <-- Para facilitar testes
+      │    │    └── parser.cup                  <-- Esqueleto fornecido para você utilizar
       └── /test
            └── /java
                 └── /br/maua/cic303

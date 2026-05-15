@@ -81,4 +81,4 @@ Identifier = {Letter}({Letter}|{Digit}|_){0,31}
 }
 
 /* Regra para o Final do Arquivo */
-<<EOF>>             { return token(Tag.EOF, ""); }
+<<EOF>>             { return symbol(sym.EOF, ""); }
